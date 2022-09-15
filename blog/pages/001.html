@@ -1,0 +1,533 @@
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+        <meta name="description" content="啊啊啊啊"/>
+        <link rel="shortcut icon" type="images/x-icon" href="https://www.helloimg.com/images/2022/09/01/Z7B5vc.jpg">
+        
+        <title>郑某返祖</title>
+<style type="text/css">
+  :root {
+    --base-bg-color: #fff;
+    --header-bg-color: #fff;
+    --link-color: #52616a;
+    --header-text-color: #252c41;
+    --header-link-color: #252c41;
+    --toc-active-color: #dddfe6;
+    --base-hover-color: #f1404b;
+    --base-hl-color: #f1404b;
+    --page-text-color: #fff;
+    --cover-no-img-bg: #fff;
+    --cover-default-bg: #101012;
+    --menu-btn-color: #52616a;
+    --header-sub-bg-color: #f0f5f9;
+    --header-sub-hover-bg-color: #c9d6de;
+    --base-color: #4facfe;
+    --cd-hover-color: #E53A40;
+    --btn-pri-bg-color: #E53A40;
+    --base-txt-color: #363636;
+
+
+    /*--btn-pri-bg-color: #ff5f5f;*/
+    --text-color: #333333;
+    --text-hover-color: #4facfe;
+    --toc-bg-color: #8e8787;
+    /*夜晚默认*/
+    --night-toc-bg-color: #e5e5e5;
+    --night-tag-txt-color: #e5e5e5;
+    --night-tag-bg-color: #555;
+    --night-link-card-bg-color: rgba(0, 0, 0, .4);
+    --night-background: #292a2d;
+    --night-txt-color: #a9a9b3;
+    --night-input-backgrround: #2d2d2d;
+    --night-code-txt-color: #c5c8c6;
+    --night-code-color: #969896;
+    --night-code-bg-color: #2d2d2d;
+    --night-code-hljs-string-color: #0857b3;
+    --night-page-a-color: #fff;
+    --monospace: "Lucida Console", Consolas, "Courier", monospace;
+  }
+
+
+  @media only screen and (min-width: 861px) {
+    .home-cover {
+      height: 100vh !important;
+    }
+  }
+
+</style>
+
+  <link rel="stylesheet"
+        href="./daima/viewer.min.css">
+  <link rel="stylesheet"
+        href="./daima/tomorrow-night-bright.css">
+  <link rel="stylesheet"
+        href="./daima/katex.min.css"
+        integrity="sha384-Cqd8ihRLum0CCg8rz0hYKPoLZ3uw+gES2rXQXycqnL5pgVQIflxAUDS7ZSjITLb5"
+        crossorigin="anonymous">
+
+<link href="./daima/jqcloud.min.css"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="./daima/style.css">
+  <link rel="stylesheet" href="./daima/idea.css">
+  <style type="text/css">
+    .posts-list .post:hover .post-preview {
+      transform: translateY(0);
+    }
+
+    .posts-list .post:hover .post-date {
+      transform: translateY(100%);
+    }
+
+    .posts-list .post-preview {
+      transform: translateY(-100%);
+    }
+  </style>
+        <script src="./daima/jquery.min.js"></script>
+    </head>
+    <body class="">
+<header class="nav-wrapper -sticky   " id="navHeader">
+    <button class="collapse-nav" onClick="collapseNav()" id="collapseNav" style=" ">
+        <div class="collapse-burger -squeeze">
+            <span class="burger-lines"></span>
+        </div>
+    </button>
+    <nav class="nav opacity-0 "  id="nav">    
+        <button class="toggle-nav">
+            <div class="burger -squeeze">
+                <span class="burger-lines"></span>
+            </div>
+        </button>
+        <ul class="nav-list " role="navigation">
+            <div class="list -left " id="menuLinks">
+                        <li class="item ">
+                            <a class="link md:text-base sm:text-sm" href="/"
+                               target="_self">首页</a>
+                        </li>
+                        <li class="item ">
+                            <a class="link md:text-base sm:text-sm" href="/archives"
+                               target="_self">归档</a>
+                        </li>
+                        <li class="item ">
+                            <a class="link md:text-base sm:text-sm" href="/categories"
+                               target="_self">分类</a>
+                        </li>
+                        <li class="item ">
+                            <a class="link md:text-base sm:text-sm" href="/tags"
+                               target="_self">标签</a>
+                        </li>
+                        <li class="item ">
+                            <a class="link md:text-base sm:text-sm" href="/photos"
+                               target="_self">相册</a>
+                        </li>
+                        <li class="item ">
+                            <a class="link md:text-base sm:text-sm" href="/links"
+                               target="_self">友链</a>
+                        </li>
+                        <li class="item ">
+                            <a class="link md:text-base sm:text-sm" href="/pages/about"
+                               target="_self">关于我</a>
+                        </li>
+            </div>
+            <div class="list -right">
+                <div class="overlay"></div>
+            </div>
+        </ul>
+            <div class="day-switch" style="position: relative; right: 40px">
+                <div class="day-night-switch" role="button" onClick="dayNightSwitch()">
+                    <div class="onOff daySwitch" id="daySwitch">
+                        <div class="star star1"></div>
+                        <div class="star star2"></div>
+                        <div class="star star3"></div>
+                        <div class="star star4"></div>
+                        <div class="star star5"></div>
+                        <div class="star sky"></div>
+                        <div class="sunMoon">
+                            <div class="crater crater1"></div>
+                            <div class="crater crater2"></div>
+                            <div class="crater crater3"></div>
+                            <div class="cloud part1"></div>
+                            <div class="cloud part2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+</header>
+  <main class="mx-auto" id="container">
+    <header class="bg-cover post-cover" id="postHeader">
+          <div class="cover-bg">
+            <img src="https://www.helloimg.com/images/2022/08/26/ZpuSLM.jpg" class="z-auto" alt="封面图">
+          </div>
+      <div class="cover-content post-cover-content flex justify-center">
+        <!-- 封面内容 -->
+        <div class="inner flex flex-col justify-center">
+          <p class="post-title cover-title text-base lg:text-4xl xl:text-5xl md:text-3xl">郑小伙返祖</p>
+          <div class="post-meta">
+            <div class="post-meta-wrap">
+              <img class="author-avatar"
+                   srcset="https://www.helloimg.com/images/2022/09/01/Z7B5vc.jpg"
+                   src="https://www.helloimg.com/images/2022/09/01/Z7B5vc.jpg" alt=""/>
+              <span class="post-author">null次访问</span>
+              <time class="published"
+                    datetime="2017-10-06">
+                发布: 2022-01-22</time>
+                  <time class="published"
+                        datetime="2020-09-29">
+                    最后编辑: 2022-09-15</time>
+            </div>
+            <div class="text-center post-categories">
+                  <span class="iconfont icon-folder"> </span>
+
+                      <a href="null123" class="post-category">
+                        · 视频分享
+                      </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="article-content content-container" id="gallery-content">
+
+      <div id="original" style="display: none"># 一、视频来源
+众所周知，互联网是个好东西，一旦有什么好玩的都可以录下来发到网上。而那天是放寒假前一天，考完试后，我和 `郑小伙` 一起回去，然后他突然开玩笑说他是个猴子，然后就开始了返祖，另一旁拿着手机的我就给录下来了，他那时还没发现😂，然后就有了这段视频......
+
+## 二、录音来源
+某天我正在用QQ跟他聊天，然后他好突然发疯了一样，给我发了一大堆语音，都是胡说八道而且当中 `还有一声猴叫` ！我马上就收藏了，直到现在终于有用了，我可以放在这篇文章里。
+
+### 三、视频&音频欣赏
+- [视频&音频Bilibili](https://hashiqi79461.github.io/GeRenZhuYe/04.html)
+- [暂无其他来源](null)
+
+</div>
+      <div
+        class="container mx-auto px-4 md-content mt-8 max-w-6xl tracking-wider md:leading-relaxed sm:leading-normal cn-pd ct-container loading"
+        id="write">
+      </div>
+      <div id="tocFlag"></div>
+          <aside id="toc" class="toc"></aside>
+    </div>
+
+    <div
+      class="container mx-auto px-4 mt-8 max-w-6xl tracking-wider md:leading-relaxed sm:leading-normal  cn-pd ct-container coffee-tags">
+      <blockquote class="post-copyright">
+        <p><b>视频下载：</b> <a href="链接">点我以下载</a></p>
+<!-- 分辨 -->
+<!-- 分辨 -->
+        <p><b>音频下载：</b> <a href="链接">点我以下载</a></p>
+<!-- 分辨 -->
+<!-- 分辨 -->
+      </blockquote>
+    <section class="donate">
+        <div class="icon">
+                <a href="javascript:;" id="alipay" onClick="toggleAliPay()"><i
+                            class="iconfont icon-alipay"></i></a>
+                <a href="javascript:;" id="wechat" onClick="toggleWeChat()"><i
+                            class="iconfont icon-wechatpay"></i></a>
+        </div>
+            <div class="qrcode qrcode-alipay hidden">
+                <img src="https://www.helloimg.com/images/2022/09/01/Z7B5vc.jpg">
+            </div>
+            <div class="qrcode qrcode-wechat hidden">
+                <img src="https://www.helloimg.com/images/2022/08/26/ZpuSLM.jpg">
+            </div>
+    </section>
+    </div>
+
+
+    <div
+      class="container mx-auto px-4 mt-8 pb-4 max-w-6xl tracking-wider md:leading-relaxed sm:leading-normal cn-pd coffee-tags ct-container">
+      <p class="flex flex-row justify-start flex-wrap">
+                <a href="链接" class="post-tag mt-2 mb-2 mr-2">
+                  #&nbsp;生活
+                </a>
+                <a href="可删链接" class="post-tag mt-2 mb-2 mr-2">
+                  #&nbsp;返祖
+                </a>
+      </p>
+      <hr class="mt-4" style="background-color: rgba(96, 125, 139, .05); size: 2px;">
+    </div>
+
+    <!-- 上一篇和下一篇 -->
+<div class="container mx-auto mt-4 pb-8  ct-container">
+    <div class="entry-navigation">
+        <div class="nav previous">
+                                <img src="https://www.helloimg.com/images/2022/08/26/ZpuSLM.jpg" />
+                <span>上一篇</span>
+                <h4 class="entry-title">上一篇的标题</h4>
+                <a class="u-permalink" href="链接"></a>
+        </div>
+        <div class="nav next">
+                    <img src="https://www.helloimg.com/images/2022/08/26/ZpuSLM.jpg" />
+                <span>下一篇</span>
+                <h4 class="entry-title">下一篇的标题</h4>
+                <a class="u-permalink" href="链接"></a>
+        </div>
+    </div>
+</div>
+
+    <div
+      class="container mx-auto px-4 mt-16 max-w-6xl tracking-wider md:leading-relaxed sm:leading-normal ct-container cn-pd">
+        <script src="./pagedaima/vue.min.js"></script>
+        <halo-comment id="32" type="post"/>
+    </div>
+  </main>
+<footer class="footer mt-8">
+    <div class="inner container mx-auto flex flex-row lg:justify-between  md:justify-center items-center grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="offsite-links flex flex-row justify-center flex-wrap">
+        </div>
+
+            <!-- 请尊重作者，请务必保留版权 -->
+            <div class="badges">
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="null4" target="_blank">
+                        <span class="badge-subject">Form-</span>
+                        <span class="badge-value bg-blue">Android</span>
+                    </a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="null5"
+                       target="_blank">
+                        <span class="badge-subject">作者-</span>
+                        <span class="badge-value bg-red">HaShiQi</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="moon-menu" id="moonMenu" >
+    <div class="moon-menu-items" >
+        <span class="moon-menu-item pl-6 iconfont icon-up" onClick="ckBack2Top()"> </span>
+        <span class="moon-menu-item pl-6 iconfont icon-down" onClick="ckBack2Bottom()"> </span>
+        <span class="moon-menu-item pl-6 iconfont icon-search" onclick="toggleSearchBox()"></span>
+                    <span class="moon-menu-item pl-6 iconfont icon-toc hidden" onclick="ckShowContent()" id="smallToc"></span>
+    </div>
+
+    <div class="moon-menu-button" onclick="ckMoonButton()">
+        <svg class="moon-menu-bg">
+            <circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle>
+            <circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle>
+            <g class="moon-dot">
+                <circle r=".2rem" cx="0" cy="-.8rem"></circle>
+                <circle r=".2rem"></circle>
+                <circle r=".2rem" cx="0" cy=".8rem"></circle>
+            </g>
+        </svg>
+        <div class="moon-menu-content">
+            <div class="moon-menu-icon"></div>
+            <div class="moon-menu-text"></div>
+        </div>
+    </div>
+</div>
+
+<div class="moon-content menu-bg" id="moonToc">
+</div>
+<form method="get" action="/search">
+    <div class="hidden search-box" id="searchBox">
+        <div class="search-ipt ipt ipt-w">
+            <div class="ipt-ct ct-bg search-container" id="searchInput">
+                <label class="sh-lab">
+                    <input class="sh-ipt" maxlength="30" name="keyword" id="searchBoxInput" spellcheck="false" placeholder="Search" autofocus="autofocus" autocomplete="off">
+                    <i class="sh-icon iconfont icon-search"></i>
+                </label>
+                <a class="sh-exit iconfont icon-exit" onClick="toggleSearchBox()"></a>
+            </div>
+        </div>
+    </div>
+</form>
+
+    </body>
+<!-- markdown 插件 -->
+<script src="./taildaima/marked.min.js"></script>
+
+<!--图片预览插件-->
+    <script src="./taildaima/viewer.min.js"></script>
+    <script src="./taildaima/highlight.min.js"></script>
+        <script src="./taildaima/highlight.lang.js"></script>
+        <script src="./taildaima/linesNumber.js"></script>
+
+    <script src="./taildaima/tocbot.min.js"></script>
+
+    <script src="./taildaima/isotope.pkgd.min.js"></script>
+
+    <script src="./taildaima/moon.js"></script>
+
+
+
+<script src="./taildaima/simply-nav.js"></script>
+
+<script type="text/javascript">
+  let openKatex = false;
+      openKatex = true;
+
+  // 是否开启代码高亮
+  let enableCodeHighlight = false;
+  let collpaseCode = false;
+    enableCodeHighlight = true;
+  let enableLineNumber = false;
+  // 是否开启行号
+    enableLineNumber = typeof lineNumbersBlock === 'function';
+
+</script>
+
+
+    <script src="./taildaima/main.js"></script>
+
+
+
+    <script defer src="./taildaima/katex.min.js"
+                  integrity="sha384-1Or6BdeNQb0ezrmtGeqQHFpppNd7a/gw29xeiSikBbsb44xu3uAo8c7FwbF5jhbd"
+                  crossorigin="anonymous"></script>
+    <script defer src="./taildaima/auto-render.min.js"
+                  integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+                  crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+  // console.clear();
+  console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
+    console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "null6");
+</script>
+
+<script type="text/javascript">
+  
+
+  const loading = "./taildaima/loading-45.svg";
+  var photoList = ``;
+  var photos = new Array();
+  if (photoList && photoList.trim() !== '') {
+    if(photoList.endsWith(';')) {
+      photoList = photoList.substring(0, photoList.length - 1);
+    }
+    var photoArr = photoList.split(";");
+    // 过滤photos中的空字符
+    for(let i = 0; i < photoArr.length; i++) {
+        if (photoArr[i] && photoArr[i].trim().length > 0){
+             photos.push(photoArr[i].trim());
+        }
+
+    }
+  }
+  // 默认收缩菜单
+  var hideMenu = false;
+      hideMenu = true;
+
+  var autoNightMode = false
+    autoNightMode = true;
+</script>
+
+
+
+    <script src="./taildaima/jquery.pjax.js"></script>
+    <script src="./taildaima/nprogress.min.js"></script>
+    <link rel="stylesheet" href="./taildaima/nprogress.min.css">
+    <script type="text/javascript">
+      $(document).pjax(
+          'a[href]:not([href^="#"]):not([data-not-pjax]):not([target^="_blank"]), form',
+          '#container', {fragment: '#container', timeout: 8000});
+
+      $(document).on('pjax:send', function () {
+        NProgress.start();
+      })
+
+      $(document).on('pjax:complete', function () {
+        NProgress.done();
+
+        // 检查夜间模式
+        checkNightMode()
+
+        // 自动切换夜间模式
+        if (autoNightMode) {
+          autoDayNight();
+        }
+
+        // 删除listener
+        removeScrollTocFixed();
+
+        // 重新加载 评论
+        $('script[data-pjax-comment]').each(function () {
+          var commentParent = $(this).parent()
+          var comment = $(this).remove();
+          commentParent.append(comment);
+        });
+
+        if ($('#container').find('.ziyan').length > 0) {
+          // 计算时间
+          setTimeAgo();
+
+          // 自言代码高亮
+          hljsZiYanCode()
+
+        }
+
+        // 存在 markdown 页面的功能
+        if ($("#container").find('.md-content').length > 0) {
+          // 格式化内容
+          // 格式化markdown文章
+          const format = formatContent();
+
+          // 目录相关
+          if (typeof tocbot !== "undefined" && document.getElementById("toc")) {
+            dealContentToc();
+          }
+
+          if ($('#container').find('.md-content').length > 0 && format) {
+            return;
+          } else {
+            loadGallery();
+            lazyloadImg();
+          }
+
+
+        }
+
+        // 相册页面功能
+        if ($("#container").find('.photos-page').length > 0) {
+          loadGallery();
+        }
+
+        // 图片懒加载
+        lazyloadImg()
+
+        //重载
+        if (typeof _hmt !== 'undefined') {
+          // support 百度统计
+          _hmt.push(['_trackPageview', location.pathname + location.search]);
+        }
+        if (typeof ga !== 'undefined') {
+          // support google analytics
+          ga('send', 'pageview', location.pathname + location.search);
+        }
+
+        if ($('#container').find('.jqcloud').length > 0) {
+          if (typeof $.fn.jQCloud !== "function") {
+            $.getScript(
+                "./taildaima/jqcloud-1.0.4.min.js",
+                function () {
+                  renderTagCloud();
+                  renderCategoryCloud();
+                });
+          } else {
+            renderTagCloud();
+            renderCategoryCloud();
+          }
+
+        }
+
+        ;
+
+      });
+
+      $(document).on('pjax:error', function () {
+        NProgress.done();
+      });
+
+    </script>
+
+    </html>
